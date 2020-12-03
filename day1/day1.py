@@ -12,7 +12,7 @@ for tup_0 in all_entries:
             result = tup_0 * tup_1
             break
 
-# Task for two stars
+# Task for star two
 for tup_0 in all_entries:
     for tup_1 in all_entries:
         for tup_2 in all_entries:
