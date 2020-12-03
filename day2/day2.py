@@ -27,7 +27,12 @@ def is_valid_toboggan_password(password: str):
     first_pw_index_is_letter = password[first-1] is req_char
     last_pw_index_is_letter = password[last-1] is req_char
 
-    return (not (first_pw_index_is_letter and last_pw_index_is_letter) and (first_pw_index_is_letter or last_pw_index_is_letter))
+    return (
+        not (first_pw_index_is_letter and last_pw_index_is_letter) 
+        and (
+            first_pw_index_is_letter or last_pw_index_is_letter
+        )
+    )
 
 
 with open(input_file_path, "r") as input:
@@ -39,7 +44,6 @@ result = 0
 # task for star one
 for entry in all_entries:
     if is_valid_password(entry):
-        print(entry + " is valid")
         result += 1
 print(result)
 
@@ -49,6 +53,5 @@ result = 0
 
 for entry in all_entries:
     if is_valid_toboggan_password(entry):
-        print(entry + " is valid")
         result += 1
 print(result)
