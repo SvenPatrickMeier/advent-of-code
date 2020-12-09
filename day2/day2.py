@@ -10,8 +10,6 @@ def is_valid_password(password: str):
     min, max = int(splitted_password[0].split("-")[0]), int(splitted_password[0].split("-")[1])
     req_char = splitted_password[1].strip(":")
     password = splitted_password[2]
-   
-    print(min, max, req_char, password)
     return password.count(req_char) >= min and password.count(req_char) <= max
 
 def is_valid_toboggan_password(password: str):
